@@ -33,7 +33,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    width: 1140px;
+    max-width: 1140px;
 }
 
 .box {
@@ -42,11 +42,9 @@ p {
     border-radius: 5px;
     margin: 15px;
     padding: 30px;
+    position: relative;
+    overflow: hidden;
     width: 350px;
-}
-
-.box-push {
-    transform: translateY(50%);
 }
 
 .box-cyan {
@@ -65,6 +63,10 @@ p {
     border-top: 3px solid hsl(212, 86%, 64%);
 }
 
+.box-push {
+    transform: translateY(50%);
+}
+
 .box h2 {
     margin: 0;
 }
@@ -79,6 +81,8 @@ p {
     margin-left: auto;
 }
 
-footer {
-    text-align: center;
+@media (max-width: 775px) {
+	.box-push {
+		transform: translateY(0);
+	}
 }
